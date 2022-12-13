@@ -1,3 +1,5 @@
+@import "store.scss";
+@import "invoice.scss";
 html,
 body {
   padding: 0;
@@ -26,19 +28,19 @@ a {
   }
 }
 
-@import url('https://rsms.me/inter/inter-ui.css');
+@import url("https://rsms.me/inter/inter-ui.css");
 
 ::selection {
-  background: #2D2F36;
+  background: #2d2f36;
   color: #c2c2c5;
 }
 
 ::-webkit-selection {
-  background: #2D2F36;
+  background: #2d2f36;
 }
 
 ::-moz-selection {
-  background: #2D2F36;
+  background: #2d2f36;
 }
 
 .signin {
@@ -53,22 +55,23 @@ a {
   background-position: center;
 
   &:after {
-    content: '';
+    content: "";
     position: absolute;
     width: 100%;
     height: 100vh;
-    background-color: #2d2f3642;
+    background-color: #09123242;
+    backdrop-filter: blur(5px);
     z-index: 1;
   }
 
   .page {
     display: flex;
     flex-direction: column;
-    height: 100vh;
-    width: 80%;
-    z-index: 100;
     justify-content: center;
     align-items: flex-start;
+    height: 100vh;
+    width: 85%;
+    z-index: 100;
   }
 
   @media (max-width: 767px) {
@@ -136,9 +139,9 @@ a {
   }
 
   .right {
-    background: #474A59;
+    background: #474a59;
     box-shadow: 0px 0px 40px 16px rgba(0, 0, 0, 0.22);
-    color: #F1F1F2;
+    color: #f1f1f2;
     position: relative;
     width: 50%;
   }
@@ -160,7 +163,6 @@ a {
   path {
     fill: none;
     stroke: url(#linearGradient);
-    ;
     stroke-width: 4;
     stroke-dasharray: 240 1386;
   }
@@ -242,11 +244,12 @@ a {
   background-position: center;
 
   &:after {
-    content: '';
+    content: "";
     position: absolute;
     width: 100%;
     height: 100vh;
-    background-color: #2d2f3642;
+    background-color: #09123242;
+    backdrop-filter: blur(5px);
     z-index: 1;
   }
 
@@ -325,9 +328,9 @@ a {
   }
 
   .right {
-    background: #474A59;
+    background: #474a59;
     box-shadow: 0px 0px 40px 16px rgba(0, 0, 0, 0.22);
-    color: #F1F1F2;
+    color: #f1f1f2;
     position: relative;
     width: 50%;
   }
@@ -349,7 +352,6 @@ a {
   path {
     fill: none;
     stroke: url(#linearGradient);
-    ;
     stroke-width: 4;
     stroke-dasharray: 240 1386;
   }
@@ -415,26 +417,5 @@ a {
         cursor: pointer;
       }
     }
-  }
-}
-// home design
-.home{
-  background-image: url("/3.jpg");
-  width: 100%;
-  height: 100vh;
-  background-position: top;
-  background-repeat: no-repeat;
-  background-size: cover;
-  position: relative;
-  z-index: 100;
-  &::after{
-    content: '';
-    position: absolute;
-    background-color: #00000021;
-    width: 100%;
-    height: 100vh;
-    top: 0;
-    left: 0;
-    z-index: -1;
   }
 }
