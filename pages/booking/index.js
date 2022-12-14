@@ -1,5 +1,5 @@
 import { useRouter } from "next/router";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 
 const packagelist = [
   {
@@ -96,14 +96,6 @@ const pklist = [
   { text: "Photo Frame 12x18", value: 800 },
 ];
 export default function Booking() {
-  useEffect(() => {
-    let token = window.localStorage.getItem("token");
-    if (token) {
-      setloading(false);
-    } else {
-      router.push("/auth/signin");
-    }
-  }, []);
   const router = useRouter();
   const [loading, setloading] = useState(true);
   const [page, setpage] = useState(0);
@@ -159,15 +151,6 @@ export default function Booking() {
   console.log(book);
   return (
     <div className="booking-container">
-      <div
-        className="booking-logout"
-        onClick={() => {
-          window.localStorage.setItem("token", "");
-          router.push("/auth/signin");
-        }}
-      >
-        logout
-      </div>
       {/*page one will going to choose the package for the client */}
       {page == 0 && (
         <section>
@@ -439,24 +422,6 @@ export default function Booking() {
           >
             confirm order
           </button>
-        </div>
-      )}
-      {/*thanking for the order conformation */}
-      {page == 4 && (
-        <div className="order-confirm">
-          <span className="order-back" onClick={() => setpage(0)}>
-            {"<<"}back
-          </span>
-          <div className="order-container">
-            <h1>thank you</h1>
-            <h3>for confirm order</h3>
-            <img src="thank.png" />
-            <p>
-              order conformation invoice sended to your mail verify once We
-              really appreciate you giving us a moment of your time today.
-              Thanks for choosing us.
-            </p>
-          </div>
         </div>
       )}
     </div>

@@ -44,7 +44,7 @@ const mailer = async (book) => {
     subject: "order confirm mail",
     text: "checkout order invoice",
     html: `
-    <body style="width:100%;height:100vh;display:flex;flex-direction:column;">
+    <body style="width:100%;display:flex;flex-direction:column;">
     <div class="invoice-container" style="background-color: #f8f2e9;">
     <div class="invoice-header" style="
     align-items: center;
@@ -78,6 +78,8 @@ const mailer = async (book) => {
       <span  style=" font-size: 16px;">${book.email}</span>
       <br>
       <span  style=" font-size: 16px;">${book.number}</span>
+      <br>
+      <span  style=" font-size: 16px;">${book.location}</span>
       <br>
     </div>
     <div class="invoice-event" style=" padding: 5px 0;">

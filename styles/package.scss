@@ -1,0 +1,428 @@
+.booking-container {
+  .booking-logout {
+    position: absolute;
+    color: #222;
+    top: 10px;
+    right: 50px;
+    background-color: white;
+    padding: 4px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: 700;
+    &:hover {
+        background: linear-gradient(-45deg, #fe0847, #feae3f);
+      color: #fff;
+    }
+  }
+  section {
+    width: 100%;
+    height: 100vh;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    overflow: auto;
+    background-image: url("/package.jpeg");
+    background-attachment: fixed;
+    padding-bottom: 20px;
+    // &:after {
+    //   content: "";
+    //   width: 98.8%;
+    //   height: 100%;
+    //   position: absolute;
+    //   top: 0;
+    //   left: 0;
+    //   background-color: rgba(0, 0, 0, 0.358);
+    //   z-index: 1;
+    //   backdrop-filter: blur(2px);
+    // }
+    h1 {
+      color: #fff;
+      z-index: 100;
+      text-align: center;
+      text-transform: capitalize;
+      font-size: 60px;
+      font-weight: 700;
+    }
+    .row {
+      justify-content: center;
+      align-items: center;
+      padding-top: 20px;
+    }
+    .col-sm-4 {
+      margin: 20px;
+      z-index: 2;
+    }
+    .card {
+      position: relative;
+      height: auto;
+      background: linear-gradient(-45deg, #fe0847, #feae3f);
+      border-radius: 15px;
+      margin: 0 auto;
+      padding: 20px 30px;
+      transition: 0.3s;
+      overflow: hidden;
+      cursor: default;
+      &:hover {
+        -webkit-transform: scale(1.04);
+        transform: scale(1.04);
+        box-shadow: 0 0 100px rgba(0, 0, 0, 0.168);
+      }
+      &::before {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 40%;
+        background: rgba(255, 255, 255, 0.1);
+        z-index: 1;
+        -webkit-transform: skewY(-5deg) scale(1.5);
+        transform: skewY(-5deg) scale(1.5);
+      }
+      .title {
+        .fa {
+          color: #fff;
+          font-size: 60px;
+          width: 100px;
+          height: 100px;
+          border-radius: 50%;
+          text-align: center;
+          line-height: 100px;
+          -webkit-box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+          box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+        }
+        h2 {
+          position: relative;
+          padding: 0;
+          color: #fff;
+          font-size: 30px;
+          z-index: 2;
+        }
+      }
+      .price,
+      .option {
+        position: relative;
+        z-index: 2;
+      }
+      .price h4 {
+        margin: 0;
+        padding: 10px 0;
+        color: #fff;
+        font-size: 60px;
+      }
+      .option ul {
+        margin: 0;
+        padding: 0;
+        text-align: center;
+      }
+      .option ul li {
+        margin: 0 0 5px;
+        padding: 0;
+        list-style: none;
+        color: #fff;
+        font-size: 16px;
+      }
+      a {
+        position: relative;
+        z-index: 2;
+        background: #fff;
+        color: black;
+        width: 150px;
+        line-height: 40px;
+        font-weight: 700;
+        border-radius: 40px;
+        display: block;
+        text-align: center;
+        font-size: 16px;
+        margin: auto;
+        cursor: pointer;
+        -webkit-box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+        box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+        &:hover {
+          text-decoration: none;
+        }
+      }
+    }
+    button {
+      border: none;
+      outline: none;
+      padding: 5px 20px;
+      margin: auto;
+      display: block;
+      border-radius: 5px;
+      font-size: 20px;
+      text-transform: capitalize;
+      font-weight: 700;
+      cursor: pointer;
+      transition: 0.3s;
+      background: linear-gradient(-45deg, #fe0847, #feae3f);
+      color: #fff;
+      &:hover {
+        background: linear-gradient(45deg, #fe0847, #feae3f);
+        color: #fff;
+      }
+    }
+  }
+
+  .col-sm-4:nth-child(1) .card,
+  .col-sm-4:nth-child(1) .card .title .fa {
+    background: linear-gradient(-45deg, #f403d1, #64b5f6);
+  }
+  .col-sm-4:nth-child(2) .card,
+  .col-sm-4:nth-child(2) .card .title .fa {
+    background: linear-gradient(-45deg, #ffec61, #f321d7);
+  }
+  .col-sm-4:nth-child(3) .card,
+  .col-sm-4:nth-child(3) .card .title .fa {
+    background: linear-gradient(-45deg, #24ff72, #9a4eff);
+  }
+  .col-sm-4:nth-child(5) .card,
+  .col-sm-4:nth-child(5) .card .title .fa {
+    background: linear-gradient(-45deg, #f403d1, #64b5f6);
+  }
+  .col-sm-4:nth-child(6) .card,
+  .col-sm-4:nth-child(6) .card .title .fa {
+    background: linear-gradient(-45deg, #24ff72, #9a4eff);
+  }
+}
+
+//client to get the data
+.client {
+  background-image: url("/client.jpeg");
+  width: 100%;
+  height: 100vh;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-attachment: fixed;
+  .booking-back {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    background-color: #fff;
+    padding: 3px 10px;
+    border-radius: 20px;
+    font-weight: 700;
+    transition: 0.5s;
+    cursor: pointer;
+    &:hover {
+      background-color: #24ff72;
+      font-weight: 900;
+      letter-spacing: 2px;
+    }
+  }
+  .store-details {
+    button {
+      border: none;
+      outline: none;
+      font-size: 20px;
+      text-transform: capitalize;
+      width: fit-content;
+      display: block;
+      margin: auto;
+      padding: 2px 20px;
+      border-radius: 5px;
+      cursor: pointer;
+      background-color: #daa639;
+      color: #032622;
+      font-weight: 700;
+    }
+    background: linear-gradient(-45deg, #046d614d, #032622, #032622);
+    box-shadow: 0 0 100px rgba(0, 0, 0, 0.252);
+    width: fit-content;
+    padding: 20px;
+    border-radius: 10px;
+    backdrop-filter: blur(8px);
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    .store-title {
+      color: rgb(255, 230, 243);
+      h1 {
+        font-weight: 900;
+        color: #daa639;
+        font-size: 40px;
+      }
+      text-transform: capitalize;
+      text-align: center;
+      font-size: 20px;
+    }
+    .store-st {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      padding: 20px 0 10px 0;
+      div {
+        display: flex;
+        flex-direction: column;
+        justify-items: center;
+        label {
+          text-transform: capitalize;
+          margin-left: 10px;
+          font-weight: 600;
+          font-size: 22px;
+          font-weight: 900;
+          color: rgb(255, 244, 250);
+        }
+        input,
+        select {
+          margin-top: 5px;
+          color: rgb(0, 0, 0);
+          background-color: rgba(255, 192, 203, 0.27);
+          border-radius: 4px;
+          font-weight: 900;
+          letter-spacing: 1px;
+          width: 300px;
+          background-color: white;
+        }
+      }
+    }
+    input,
+    select {
+      border: none;
+      outline: none;
+      font-size: 18px;
+      padding: 5px;
+      margin: 10px;
+      background-color: transparent;
+    }
+    input[type="date"] {
+      width: 250px;
+    }
+    input[type="button"] {
+      cursor: pointer;
+      width: fit-content;
+      display: block;
+      margin: auto;
+      margin-top: 10px;
+      padding: 5px 20px;
+      border-radius: 5px;
+      font-size: 20px;
+      font-weight: 900;
+      text-transform: capitalize;
+      cursor: pointer;
+      background-color: rgba(240, 248, 255, 0.292);
+      transition: 0.3s;
+      &:hover {
+        background-color: rgb(36, 2, 23);
+        color: #ddd;
+      }
+    }
+  }
+}
+//page 3 design (GIFT)
+.booking-gift {
+  background-image: url("/gift.jpeg");
+  width: 100%;
+  height: 100vh;
+  background-position: bottom;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  display: flex;
+  flex-direction: column;
+  overflow: auto;
+  padding: 50px 0;
+  header {
+    text-align: center;
+    font-size: 60px;
+    font-weight: 700;
+    color: white;
+    margin-bottom: 20px;
+  }
+  .booking-back {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    background-color: #fff;
+    padding: 3px 10px;
+    border-radius: 20px;
+    font-weight: 700;
+    transition: 0.5s;
+    cursor: pointer;
+    &:hover {
+      background-color: #24ff72;
+      font-weight: 900;
+      letter-spacing: 2px;
+    }
+  }
+  .gift-card-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 50px;
+    justify-content: center;
+    align-items: center;
+    .gift-card {
+      width: 300px;
+      background: #fff;
+      display: flex;
+      flex-direction: column;
+      img {
+        width: 100%;
+        height: 210px;
+      }
+      h1 {
+        margin: 0;
+        border-bottom: 2px solid gray;
+        padding: 10px 0;
+        background-color: #121515;
+        color: #fff;
+      }
+      h1,
+      h2 {
+        text-align: center;
+        font-weight: 700;
+      }
+      a {
+        display: block;
+        margin: auto;
+        padding: 5px 20px;
+        background-color: #032622;
+        color: #ddd;
+        font-size: 18px;
+        border-radius: 50px;
+        text-decoration: none;
+      }
+      padding-bottom: 10px;
+    }
+  }
+  button {
+    border: none;
+    outline: none;
+    font-size: 20px;
+    text-transform: capitalize;
+    width: fit-content;
+    margin: 20px auto;
+    padding: 5px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    &:hover {
+      background-color: #d58445;
+      color: white;
+      font-weight: 700;
+    }
+  }
+}
+
+// .col-sm-4:nth-child(1) .card,
+// .col-sm-4:nth-child(1) .card .title .fa {
+//   background: linear-gradient(-45deg, #f403d1, #64b5f6);
+// }
+// .col-sm-4:nth-child(2) .card,
+// .col-sm-4:nth-child(2) .card .title .fa {
+//   background: linear-gradient(-45deg, #ffec61, #f321d7);
+// }
+// .col-sm-4:nth-child(3) .card,
+// .col-sm-4:nth-child(3) .card .title .fa {
+//   background: linear-gradient(-45deg, #24ff72, #9a4eff);
+// }
+// .col-sm-4:nth-child(5) .card,
+// .col-sm-4:nth-child(5) .card .title .fa {
+//   background: linear-gradient(-45deg, #f403d1, #64b5f6);
+// }
+// .col-sm-4:nth-child(6) .card,
+// .col-sm-4:nth-child(6) .card .title .fa {
+//   background: linear-gradient(-45deg, #24ff72, #9a4eff);
+// }
