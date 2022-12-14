@@ -11,7 +11,7 @@ const mailer = async (book) => {
   let tot = InvoceTotal(book);
   let transporter = nodemailer.createTransport({
     host: "smtp.hostinger.com", // hostname
-    secureConnection: false, // TLS requires secureConnection to be false
+    secureConnection: true, // TLS requires secureConnection to be false
     port: 465, // port for secure SMTP
     tls: {
       ciphers: "SSLv3",
