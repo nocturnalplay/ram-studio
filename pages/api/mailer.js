@@ -10,15 +10,15 @@ export default async function handler(req, res) {
 const mailer = async (book) => {
   let tot = InvoceTotal(book);
   let transporter = nodemailer.createTransport({
-    host: "smtp.office365.com", // hostname
+    host: "smtp.hostinger.com", // hostname
     secureConnection: false, // TLS requires secureConnection to be false
-    port: 587, // port for secure SMTP
+    port: 465, // port for secure SMTP
     tls: {
       ciphers: "SSLv3",
     },
     auth: {
-      user: "youngstorage@outlook.com",
-      pass: "dotmail123",
+      user: "capturethemoment@attirantwebz.in",
+      pass: "Ctm#2022",
     },
   });
   let pkg = "";
@@ -39,7 +39,7 @@ const mailer = async (book) => {
   </tr>`;
   });
   let mailOptions = {
-    from: "youngstorage@outlook.com",
+    from: "capturethemoment@attirantwebz.in",
     to: book.email,
     subject: "order confirm mail",
     text: "checkout order invoice",
@@ -52,7 +52,7 @@ const mailer = async (book) => {
     padding: 5px 0;
     border-bottom: 2px solid gray;
     margin: 0 0 10px 0;">
-      <img style=" width: 150px;" src="/logo.png" alt="capture the moment" />
+      <img style=" width: 150px;" src="https://capture-the-moment.netlify.app/logo.png" alt="capture the moment" />
       <h1 style=" font-weight: 900;
       background-image: linear-gradient(70deg, rgba(255, 0, 183, 0.569), rgba(81, 0, 128, 0.9));
       padding: 5px 10px;

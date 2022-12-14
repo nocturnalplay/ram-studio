@@ -6,7 +6,7 @@ import { useRouter } from "next/router";
 
 const loginuser = [
   {
-    email: "ram@gmail.com",
+    email: " kirthickr5@gamil.com",
     password: "ram123",
   },
   {
