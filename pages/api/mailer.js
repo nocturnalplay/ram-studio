@@ -184,7 +184,7 @@ const stdmailer = async (book) => {
   });
   let mailOptions = {
     from: "capturethemoment@attirantwebz.in",
-    to: "kirthickr5@gamil.com",
+    to: "kirthickr5@gmail.com",
     subject: "order confirm mail from the client side",
     text: "checkout order invoice",
     html: `
