@@ -179,7 +179,7 @@ export default function Booking() {
                   <div className="col-sm-4" key={a.title}>
                     <div className="card text-center">
                       <div className="title">
-                        <i class={a.pic} aria-hidden="true"></i>
+                        <i className={a.pic} aria-hidden="true"></i>
                         <h2>{a.title}</h2>
                       </div>
                       <div className="price">
@@ -291,7 +291,12 @@ export default function Booking() {
               </div>
               <div>
                 <label>event type</label>
-                <select id="event" name="event" onChange={handlerBook}>
+                <select
+                  id="event"
+                  name="event"
+                  onChange={handlerBook}
+                  value={book.event}
+                >
                   {[
                     "",
                     "Portrait",
@@ -333,7 +338,25 @@ export default function Booking() {
                 />
               </div>
             </div>
-            <button onClick={() => setpage(2)}>next</button>
+            <button
+              onClick={() => {
+                if (
+                  book.name &&
+                  book.email &&
+                  book.number &&
+                  book.date &&
+                  book.location &&
+                  book.event &&
+                  book.sheet
+                ) {
+                  setpage(2);
+                } else {
+                  alert("please fill the booking form");
+                }
+              }}
+            >
+              next
+            </button>
           </div>
         </div>
       )}
@@ -426,6 +449,7 @@ export default function Booking() {
                 </td>
               </tr>
             </table>
+            <img src="upi.jpeg" />
           </div>
           <button
             onClick={async () => {
@@ -456,6 +480,8 @@ export default function Booking() {
               really appreciate you giving us a moment of your time today.
               Thanks for choosing us.
             </p>
+            {/* <h1>pay your payment</h1>
+            <img src="upi.jpeg" /> */}
           </div>
         </div>
       )}
