@@ -6,7 +6,7 @@ const packagelist = [
     title: "Traditional Photography",
     price: "12K",
     list: [
-      "Traditional photography involves sitting down pictures of the people. They are aware that somebody is clicking their picture. This kind of photography is more formal in its approach",
+      "Session (4hr-350 photos) Traditional photography involves sitting down pictures of the people. They are aware that somebody is clicking their picture. This kind of photography is more formal in its approach",
     ],
     pic: "fa fa-camera-retro",
     d: "tp",
@@ -15,7 +15,7 @@ const packagelist = [
     title: "Traditional Videography",
     price: "20K",
     list: [
-      "A Traditional videographer has a typical video camera that is usually shot continuously. There's less creativity involved besides documenting everything that's being done.",
+      "Session (4hr-one videos) A Traditional videographer has a typical video camera that is usually shot continuously. There's less creativity involved besides documenting everything that's being done.",
     ],
     pic: "fa fa-video",
     d: "tv",
@@ -24,7 +24,7 @@ const packagelist = [
     title: "Candid Photography",
     price: "18K",
     list: [
-      "A candid photograph is a photograph captured without creating a posed appearance. The candid nature of a photograph is unrelated to the subject's knowledge",
+      "Session (4hr-350 photos) A candid photograph is a photograph captured without creating a posed appearance. The candid nature of a photograph is unrelated to the subject's knowledge",
     ],
     pic: "fa fa-camera-retro",
     d: "cp",
@@ -33,7 +33,7 @@ const packagelist = [
     title: "Candid Videography",
     price: "25K",
     list: [
-      "A Candid Videography focuses on spontaneity rather than technique. It is un-posed a. unplanned, immediate and unobtrusive.",
+      "Session (4hr-one videos) A Candid Videography focuses on spontaneity rather than technique. It is un-posed a. unplanned, immediate and unobtrusive.",
     ],
     pic: "fa fa-video",
     d: "cv",
@@ -42,7 +42,7 @@ const packagelist = [
     title: "Drone",
     price: "10K",
     list: [
-      "Drone videography is the process of capturing video from a drone in flight or on the ground. There are some pretty amazing shots that you can capture with this method!",
+      "Session (2hr) Drone videography is the process of capturing video from a drone in flight or on the ground. There are some pretty amazing shots that you can capture with this method!",
     ],
     pic: "fa fa-plane",
     d: "dr",
@@ -51,7 +51,7 @@ const packagelist = [
     title: "LED Screen",
     price: "30K",
     list: [
-      "LED display is a flat panel display that uses  live the event in front of audiences and array of light-emitting diodes as pixels for a video display.",
+      "Session (5hr-on screen) LED display is a flat panel display that uses  live the event in front of audiences and array of light-emitting diodes as pixels for a video display.",
     ],
     pic: "fa fa-desktop",
     d: "led",
@@ -326,7 +326,7 @@ export default function Booking() {
                 /> */}
               </div>
             </div>
-            <div className="store-inp store-st">
+            {/* <div className="store-inp store-st">
               <div>
                 <label>(12x36) album sheets (20-60)</label>
                 <input
@@ -337,7 +337,8 @@ export default function Booking() {
                   required
                 />
               </div>
-            </div>
+            </div> */}
+            <div className="checkbox-terms"><h6>Accept the terms and conditions <input type="checkbox" /></h6></div>
             <button
               onClick={() => {
                 if (
@@ -346,8 +347,7 @@ export default function Booking() {
                   book.number &&
                   book.date &&
                   book.location &&
-                  book.event &&
-                  book.sheet
+                  book.event
                 ) {
                   setpage(2);
                 } else {
@@ -358,6 +358,19 @@ export default function Booking() {
               next
             </button>
           </div>
+          <p className="termandcondition">
+            <h3>Company Terms and Condition</h3>
+            1. Upon acceptance and receipt of the quotation, the payment for the service will split into three Payments and payment splits as follows below<br />
+            •	50% of the payment needs to be paid as advance for the order confirmation<br />
+            •	40% of the payment should be paid while closer of the event<br />
+            •	10% of the payment should be paid while confirming the album design and preparation<br />
+            2. All photographic materials, such as video photos, or slides, shall be exclusive property of photographer.The photographers shall ovm the copyright in all images created and may use the work for samples.
+            Advertising and self- promotion. Usage outside the bounds of this agreements will require the client's consents.<br />
+            3.  Forever our studio keeps the clients files for up to years after the photography session, and is not liable for any claims after this period. All clients files will be deleted and backups will be purged after this period.<br />
+            4.	In event of unfortunate cancellation of the sessions. Our studio will acquire the 20% of amount paid by the client for efforts made by studio.<br />
+            5.	Album will be delivered with in 11- 30 working days upon getting the confirmation of the selection photographs to be included in the album.<br />
+            6.	Upon delivering the album if there is any correction to be made towards it our studio will not be liable to do so, however if there miscommunication or mis understanding by the studio the correction of album will be held responsible by the studio.<br />
+          </p>
         </div>
       )}
       {/* chooose the gift package */}
@@ -397,6 +410,46 @@ export default function Booking() {
                 </a>
               </div>
             ))}
+          </div>
+          <div className="selectalbam">
+            <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+              <ol class="carousel-indicators">
+                <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+                <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+                <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+              </ol>
+              <div class="carousel-inner">
+                <div class="carousel-item active">
+                  <img class="d-block w-100" src="albam.jpg" alt="First slide" />
+                </div>
+                <div class="carousel-item">
+                  <img class="d-block w-100" src="albam.jpg" alt="Second slide" />
+                </div>
+                <div class="carousel-item">
+                  <img class="d-block w-100" src="albam.jpg" alt="Third slide" />
+                </div>
+              </div>
+              <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="sr-only">Previous</span>
+              </a>
+              <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="sr-only">Next</span>
+              </a>
+            </div>
+            <div className="store-inp store-st">
+              <div>
+                <label>(12x36) album sheets (20-60)</label>
+                <input
+                  type="number"
+                  onChange={handlerBook}
+                  name="sheet"
+                  value={book.sheet}
+                  required
+                />
+              </div>
+            </div>
           </div>
           <button onClick={readyInvoice}>check out</button>
         </div>
